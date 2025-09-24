@@ -35,6 +35,8 @@
           "longitude": {"field": "lon", "type": "quantitative"},
           "latitude": {"field": "lat", "type": "quantitative"},
           "size": {
+            "field": "Count",
+            "type": "quantitative",
             "title": "Number of Unicorn Startups",
             "scale": {"domain": [1,100,600]}
           },
