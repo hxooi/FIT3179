@@ -1,0 +1,140 @@
+{
+  "$schema": "https://vega.github.io/schema/vega/v6.json",
+  "title": {
+    "text": "Valuations of Unicorn Companies by Industry",
+    "fontSize": 14,
+    "font": "Verdana"
+  },
+  "width": 600,
+  "height": 600,
+  "padding": 5,
+  "signals": [
+    {"name": "method", "value": "squarify"},
+    {"name": "ratio", "value": 1.6108},
+    {"name": "labelFont", "value": 10},
+    {"name": "charWidth", "value": 0.55},
+    {"name": "labelPad", "value": 2}
+  ],
+  "data": [
+    {
+      "name": "gapminder",
+      "url": "https://raw.githubusercontent.com/hxooi/FIT3179/main/DataVisualization2/data/unicorn_industry_treemap.csv",
+      "format": {"type": "csv", "delimiter": ","},
+      "transform": [
+        {"type": "nest", "keys": ["Industry", "Company"]},
+        {
+          "type": "treemap",
+          "field": "Valuation ($B)",
+          "method": {"signal": "method"},
+          "ratio": {"signal": "ratio"},
+          "paddingInner": 1,
+          "size": [{"signal": "width"}, {"signal": "height"}]
+        }
+      ]
+    },
+    {
+      "name": "nodes",
+      "source": "gapminder",
+      "transform": [{"type": "filter", "expr": "datum.children"}]
+    },
+    {
+      "name": "leaves",
+      "source": "gapminder",
+      "transform": [{"type": "filter", "expr": "!datum.children"}]
+    }
+  ],
+  "scales": [
+    {
+      "name": "color",
+      "type": "ordinal",
+      "domain": {"data": "gapminder", "field": "Industry"},
+      "range": [
+        "#357C3C",
+        "#85C88A",
+        "#E5CB9F",
+        "#FFCCB3",
+        "#FFAB76",
+        "#FE7E6D",
+        "#FFD372",
+        "#C689C6",
+        "#AC66CC",
+        "#A799B7",
+        "#B7657B",
+        "#93ABD3",
+        "#7692E4",
+        "#3F52E3",
+        "#2541B2"
+      ]
+    },
+    {
+      "name": "size",
+      "type": "ordinal",
+      "domain": [0, 1, 2, 3],
+      "range": [256, 28, 20, 14]
+    },
+    {
+      "name": "opacity",
+      "type": "ordinal",
+      "domain": [0, 1, 2, 3],
+      "range": [0.15, 0.5, 0.8, 1]
+    }
+  ],
+  "marks": [
+    {
+      "type": "rect",
+      "from": {"data": "gapminder"},
+      "encode": {
+        "update": {
+          "x": {"field": "x0"},
+          "x2": {"field": "x1"},
+          "y": {"field": "y0"},
+          "y2": {"field": "y1"},
+          "fill": {"scale": "color", "field": "Industry"},
+          "fillOpacity": {"value": 0.8}
+        }
+      }
+    },
+    {
+      "type": "rect",
+      "from": {"data": "leaves"},
+      "encode": {
+        "enter": {"stroke": {"value": "#fff"}, "strokeWidth": {"value": 0.2}},
+        "update": {
+          "x": {"field": "x0"},
+          "x2": {"field": "x1"},
+          "y": {"field": "y0"},
+          "y2": {"field": "y1"},
+          "fill": {"value": "transparent"},
+          "tooltip": {
+            "signal": "{\"Company\": datum.Company, \"Industry\": datum.Industry, \"Valuation or Total Valuation ($B)\": datum['Valuation ($B)']}"
+          }
+        },
+        "hover": {"fill": {"scale": "color", "field": "Industry"}}
+      }
+    },
+    {
+      "type": "text",
+      "from": {"data": "leaves"},
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "font": {"value": "Arial"},
+          "fontSize": {"signal": "labelFont"},
+          "fontWeight": {"value": "bold"},
+          "align": {"value": "center"},
+          "baseline": {"value": "middle"},
+          "fill": {"value": "#000"},
+          "text": {"field": "Company"}
+        },
+        "update": {
+          "x": {"signal": "0.5 * (datum.x0 + datum.x1)"},
+          "y": {"signal": "0.5 * (datum.y0 + datum.y1)"},
+          "opacity": {
+            "signal": "((datum.x1 - datum.x0) - 2*labelPad) >= (length(datum.Company) * charWidth * labelFont) && ((datum.y1 - datum.y0) - 2*labelPad) >= (labelFont) ? 1 : 0"
+          }
+        }
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}, "background": null}
+}
