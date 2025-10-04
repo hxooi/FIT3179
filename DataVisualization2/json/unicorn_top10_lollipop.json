@@ -1,0 +1,145 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 590,
+  "height": 600,
+  "title": {
+    "text": "Top 10 Unicorn Startups Worldwide",
+    "fontSize": 14,
+    "font": "Verdana"
+  },
+  "description": "Minimalist Lollipop chart with conditional colouring",
+  "data": {
+    "name": "dataset",
+    "url": "https://raw.githubusercontent.com/hxooi/FIT3179/main/DataVisualization2/data/unicorn_top10_lollipop.csv"
+  },
+  "layer": [
+    {
+      "transform": [
+        {"filter": "datum.Company== 'Checkout.com'"},
+        {
+          "calculate": "'Among the top 10, four companies come from the Fintech industry.'",
+          "as": "annotation"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "dx": -54,
+        "dy": -180,
+        "fontWeight": "bold",
+        "font": "Verdana",
+        "fontSize": 10
+      },
+      "encoding": {"text": {"field": "annotation"}}
+    },
+    {
+      "description": "Lollipop Stick",
+      "mark": {"type": "bar", "width": 8},
+      "encoding": {
+        "x": {"field": "Company", "type": "nominal"},
+        "y": {
+          "field": "Valuation ($B)",
+          "type": "quantitative",
+          "axis": {"grid": false},
+          "scale": {"domain": [0, 160]}
+        },
+        "color": {
+          "legend": null,
+          "field": "Industry",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Artificial Intelligence",
+              "Auto and transportation",
+              "Consumer and retail",
+              "Cybersecurity",
+              "Data management and analytics",
+              "E-commerce and direct-to-consumer",
+              "Edtech",
+              "Fintech",
+              "Hardware",
+              "Health",
+              "Internet software and services",
+              "Mobile and telecommunications",
+              "Other",
+              "Supply chain, logistics, and delivery",
+              "Travel"
+            ],
+            "range": [
+              "#357C3C",
+              "#85C88A",
+              "#E5CB9F",
+              "#FFCCB3",
+              "#FFAB76",
+              "#FE7E6D",
+              "#FFD372",
+              "#C689C6",
+              "#AC66CC",
+              "#A799B7",
+              "#B7657B",
+              "#93ABD3",
+              "#7692E4",
+              "#3F52E3",
+              "#2541B2"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "description": "Lollipop",
+      "mark": {
+        "type": "point",
+        "tooltip": true,
+        "size": 500,
+        "filled": true,
+        "opacity": 1
+      },
+      "encoding": {
+        "color": {
+          "legend": null,
+          "field": "Industry",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Artificial Intelligence",
+              "Auto and transportation",
+              "Consumer and retail",
+              "Cybersecurity",
+              "Data management and analytics",
+              "E-commerce and direct-to-consumer",
+              "Edtech",
+              "Fintech",
+              "Hardware",
+              "Health",
+              "Internet software and services",
+              "Mobile and telecommunications",
+              "Other",
+              "Supply chain, logistics, and delivery",
+              "Travel"
+            ],
+            "range": [
+              "#357C3C",
+              "#85C88A",
+              "#E5CB9F",
+              "#FFCCB3",
+              "#FFAB76",
+              "#FE7E6D",
+              "#FFD372",
+              "#C689C6",
+              "#AC66CC",
+              "#A799B7",
+              "#B7657B",
+              "#93ABD3",
+              "#7692E4",
+              "#3F52E3",
+              "#2541B2"
+            ]
+          }
+        },
+        "x": {"field": "Company", "type": "nominal"},
+        "y": {"field": "Valuation ($B)", "type": "quantitative"}
+      }
+    }
+  ],
+  "config": {"view": {"stroke": null}, "background": "#F6F6F6"}
+}
