@@ -1,0 +1,37 @@
+Investor,Country,Count,Percentage
+Accel,Canada,1,2
+Accel,Other,21,33
+Accel,United Kingdom,4,6
+Accel,United States,37,59
+Andreessen Horowitz,Canada,1,2
+Andreessen Horowitz,Other,4,7
+Andreessen Horowitz,United Kingdom,1,2
+Andreessen Horowitz,United States,51,89
+General Catalyst,China,1,2
+General Catalyst,Other,5,12
+General Catalyst,United Kingdom,2,5
+General Catalyst,United States,34,81
+Index Ventures,Other,12,36
+Index Ventures,United Kingdom,1,3
+Index Ventures,United States,20,61
+Insight Partners,Other,19,35
+Insight Partners,United Kingdom,2,4
+Insight Partners,United States,34,62
+Lightspeed Venture Partners,Other,5,12
+Lightspeed Venture Partners,United Kingdom,3,8
+Lightspeed Venture Partners,United States,32,80
+Sequoia Capital,Canada,1,2
+Sequoia Capital,China,1,2
+Sequoia Capital,Other,9,17
+Sequoia Capital,United States,42,79
+Sequoia Capital China,China,38,79
+Sequoia Capital China,Other,9,19
+Sequoia Capital China,United States,1,2
+SoftBank Group,China,2,6
+SoftBank Group,Other,14,40
+SoftBank Group,United Kingdom,2,6
+SoftBank Group,United States,17,49
+Tiger Global Management,China,2,4
+Tiger Global Management,Other,21,37
+Tiger Global Management,United Kingdom,2,4
+Tiger Global Management,United States,32,56

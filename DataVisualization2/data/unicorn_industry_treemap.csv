@@ -1,0 +1,207 @@
+Industry,Company,Valuation ($B)
+Artificial Intelligence,Other companies,130.23
+Artificial Intelligence,Horizon Robotics,5
+Artificial Intelligence,Icertis,5
+Artificial Intelligence,6Sense,5.2
+Artificial Intelligence,DataRobot,6.3
+Artificial Intelligence,Automation Anywhere,6.8
+Artificial Intelligence,Gong,7.25
+Artificial Intelligence,Scale AI,7.3
+Artificial Intelligence,Pony.ai,8.5
+Artificial Intelligence,Faire,12.59
+Artificial Intelligence,ByteDance,140
+Auto & transportation,Other companies,60.31
+Auto & transportation,Hello TransTech,5
+Auto & transportation,WM Motor,5
+Auto & transportation,Ola Electric Mobility,5
+Auto & transportation,SVOLT,6.51
+Auto & transportation,Argo AI,7.25
+Auto & transportation,Ola Cabs,7.5
+Auto & transportation,Bolt,8.4
+Auto & transportation,Nuro,8.6
+Auto & transportation,ZongMu Technology,11.4
+Consumer & retail,Other companies,37.18
+Consumer & retail,Easyhome,5.78
+Consumer & retail,Weilong,10.88
+Consumer & retail,JUUL Labs,12
+Consumer & retail,Yuanqi Senlin,15
+Cybersecurity,Other companies,87.8
+Cybersecurity,Coalition,5
+Cybersecurity,Wiz,6
+Cybersecurity,1Password,6.8
+Cybersecurity,Netskope,7.5
+Cybersecurity,StarkWare,8
+Cybersecurity,Lacework,8.3
+Cybersecurity,Snyk,8.6
+Cybersecurity,Tanium,9
+Data management & analytics,Other companies,69.94
+Data management & analytics,SambaNova Systems,5
+Data management & analytics,Cockroach Labs,5
+Data management & analytics,Collibra,5.25
+Data management & analytics,FiveTran,5.6
+Data management & analytics,Celonis,11
+Data management & analytics,Databricks,38
+E-commerce & direct-to-consumer,Other companies,175.64
+E-commerce & direct-to-consumer,OfBusiness,5
+E-commerce & direct-to-consumer,QuintoAndar,5.1
+E-commerce & direct-to-consumer,Back Market,5.7
+E-commerce & direct-to-consumer,Lianjia,5.77
+E-commerce & direct-to-consumer,Ziroom,6.6
+E-commerce & direct-to-consumer,Kavak,8.7
+E-commerce & direct-to-consumer,Chehaoduo,10
+E-commerce & direct-to-consumer,Thrasio,10
+E-commerce & direct-to-consumer,Xingsheng Selected,12
+E-commerce & direct-to-consumer,Xiaohongshu,20
+E-commerce & direct-to-consumer,Fanatics,27
+E-commerce & direct-to-consumer,SHEIN,100
+Edtech,Other companies,60.57
+Edtech,Yuanfudao,15.5
+Edtech,BYJU's,22
+Fintech,Other companies,366.4
+Fintech,ZEPZ,5
+Fintech,OakNorth Bank,5
+Fintech,Pine Labs,5
+Fintech,Qonto,5
+Fintech,C6 Bank,5.05
+Fintech,Trade Republic,5.36
+Fintech,Toss,5.48
+Fintech,Airwallex,5.5
+Fintech,Mambu,5.5
+Fintech,Better.com,6
+Fintech,iCapital Network,6
+Fintech,Upgrade,6.28
+Fintech,National Stock Exchange of India,6.5
+Fintech,Mollie,6.5
+Fintech,Klarna,6.7
+Fintech,ConsenSys,7
+Fintech,Gemini,7.1
+Fintech,Carta,7.4
+Fintech,Razorpay,7.5
+Fintech,Fireblocks,8
+Fintech,FalconX,8
+Fintech,Ramp,8.1
+Fintech,Tipalti,8.3
+Fintech,SumUp,8.5
+Fintech,Chainalysis,8.6
+Fintech,Rapyd,8.75
+Fintech,N26,9.23
+Fintech,Gusto,10
+Fintech,Digital Currency Group,10
+Fintech,KuCoin,10
+Fintech,Alchemy,10.2
+Fintech,Bolt,11
+Fintech,Deel,12
+Fintech,Brex,12.3
+Fintech,Plaid,13.5
+Fintech,Blockchain.com,14
+Fintech,Ripple,15
+Fintech,Chime,25
+Fintech,FTX,32
+Fintech,Revolut,33
+Fintech,Checkout.com,40
+Fintech,Stripe,95
+Hardware,China Cloud,1
+Hardware,TERMINUS Technology,1
+Hardware,BitFury,1
+Hardware,Geek+,1
+Hardware,Locus Robotics,1
+Hardware,EcoFlow,1
+Hardware,1KMXC,1
+Hardware,Agile Robots,1
+Hardware,Vayyar,1
+Hardware,Ample,1.02
+Hardware,Density,1.05
+Hardware,Gaussian Robotics,1.1
+Hardware,Enflame,1.24
+Hardware,Greater Bay Technology,1.26
+Hardware,JMGO,1.26
+Hardware,Jaguar Microsystems,1.34
+Hardware,Coocaa,1.45
+Hardware,Ledger,1.5
+Hardware,Next Silicon,1.5
+Hardware,Iluvatar CoreX,1.55
+Hardware,ICON 3D,1.57
+Hardware,Infinidat,1.6
+Hardware,Opentrons,1.8
+Hardware,Formlabs,2
+Hardware,Magic Leap,2
+Hardware,Exotec,2
+Hardware,Biren Technology,2.32
+Hardware,Carbon,2.4
+Hardware,SiFive,2.5
+Hardware,PsiQuantum,3.15
+Hardware,Flock Safety,3.5
+Hardware,Cerebras Systems,4
+Hardware,UBTECH Robotics,4.58
+Hardware,Chipone,4.73
+Hardware,Royole Corporation,6
+Hardware,Global Switch,11.1
+Hardware,Bitmain Technologies,12
+Hardware,DJI Innovations,15
+Health,Other companies,147.98
+Health,United Imaging Healthcare,5
+Health,Cityblock Health,5.7
+Health,Lyra Health,5.85
+Health,Hinge Health,6.2
+Health,Doctolib,6.4
+Health,We Doctor,7
+Health,Ro,7
+Health,Caris Life Sciences,7.83
+Health,Tempus,8.1
+Health,Biosplice Therapeutics,12
+Health,Devoted Health,12.6
+Internet software & services,Other companies,369.83
+Internet software & services,VerSe Innovation(Dailyhunt),5
+Internet software & services,ShareChat,5
+Internet software & services,OneTrust,5.1
+Internet software & services,Postman,5.6
+Internet software & services,ContentSquare,5.6
+Internet software & services,Vice Media,5.7
+Internet software & services,Workato,5.7
+Internet software & services,Benchling,6.1
+Internet software & services,Automattic,7.5
+Internet software & services,Dapper Labs,7.6
+Internet software & services,Hopin,7.75
+Internet software & services,Dream11,8
+Internet software & services,Personio,8.5
+Internet software & services,Klaviyo,9.2
+Internet software & services,OutSystems,9.5
+Internet software & services,ServiceTitan,9.5
+Internet software & services,Figma,10
+Internet software & services,reddit,10
+Internet software & services,Talkdesk,10
+Internet software & services,Notion Labs,10
+Internet software & services,Rippling,11.25
+Internet software & services,Airtable,11.7
+Internet software & services,GoodLeap,12
+Internet software & services,Grammarly,13
+Internet software & services,OpenSea,13.3
+Internet software & services,Discord,15
+Internet software & services,Miro,17.5
+Internet software & services,Canva,40
+Mobile & telecommunications,Other companies,64.89
+Mobile & telecommunications,Moon Active,5
+Mobile & telecommunications,Attentive,5.99
+Mobile & telecommunications,Niantic,9
+Other,Other companies,100.06
+Other,Howden Group Holdings,5
+Other,The Boring Company,5.7
+Other,Black Unicorn Factory,6.1
+Other,Northvolt,9.08
+Other,HEYTEA,9.28
+Other,Epic Games,31.5
+Other,SpaceX,127
+"Supply chain, logistics, & delivery",Other companies,87.02
+"Supply chain, logistics, & delivery",Rappi,5.25
+"Supply chain, logistics, & delivery",RELEX,5.7
+"Supply chain, logistics, & delivery",Flexport,8
+"Supply chain, logistics, & delivery",Lalamove,10
+"Supply chain, logistics, & delivery",Swiggy,10.7
+"Supply chain, logistics, & delivery",Getir,11.8
+"Supply chain, logistics, & delivery",goPuff,15
+"Supply chain, logistics, & delivery",J&T Express,20
+"Supply chain, logistics, & delivery",Instacart,39
+Travel,Other companies,16.75
+Travel,Hopper,5
+Travel,TripActions,7.25
+Travel,OYO Rooms,9
