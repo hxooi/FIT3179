@@ -1,0 +1,101 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "title": {
+    "text": "Distribution of Investment by Industry",
+    "fontSize": 14,
+    "font": "Verdana"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/hxooi/FIT3179/main/DataVisualization2/data/unicorn_bar_industry.csv",
+    "format": {"type": "csv"}
+  },
+  "width": 470,
+  "height": 400,
+  "mark": {"type": "bar", "stroke": "black", "cursor": "pointer"},
+  "params": [
+    {"name": "highlight", "select": {"type": "point", "on": "mouseover"}}
+  ],
+  "encoding": {
+    "y": {
+      "field": "Investor",
+      "type": "nominal",
+      "title": "Investor",
+      "sort": "-x"
+    },
+    "yOffset": {"field": "Industry"},
+    "x": {
+      "aggregate": "sum",
+      "field": "Count",
+      "type": "quantitative",
+      "title": "Number of Companies"
+    },
+    "color": {
+      "field": "Industry",
+      "type": "nominal",
+      "title": "Industry",
+      "scale": {
+        "domain": [
+          "Artificial Intelligence",
+          "Auto and transportation",
+          "Consumer and retail",
+          "Cybersecurity",
+          "Data management and analytics",
+          "E-commerce and direct-to-consumer",
+          "Edtech",
+          "Fintech",
+          "Hardware",
+          "Health",
+          "Internet software and services",
+          "Mobile and telecommunications",
+          "Other",
+          "Supply chain, logistics, and delivery",
+          "Travel"
+        ],
+        "range": [
+          "#357C3C",
+          "#85C88A",
+          "#E5CB9F",
+          "#FFCCB3",
+          "#FFAB76",
+          "#FE7E6D",
+          "#FFD372",
+          "#C689C6",
+          "#AC66CC",
+          "#A799B7",
+          "#B7657B",
+          "#93ABD3",
+          "#7692E4",
+          "#3F52E3",
+          "#2541B2"
+        ]
+      }
+    },
+    "strokeWidth": {
+      "condition": {"param": "highlight", "empty": false, "value": 2},
+      "value": 0
+    },
+    "tooltip": [
+      {"field": "Investor", "type": "nominal", "title": "Investor"},
+      {"field": "Industry", "type": "nominal", "title": "Industry"},
+      {
+        "aggregate": "sum",
+        "field": "Count",
+        "type": "quantitative",
+        "title": "Number of Companies"
+      },
+      {
+        "aggregate": "mean",
+        "field": "Percentage",
+        "type": "quantitative",
+        "title": "Percentage of Industry (%)"
+      }
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false},
+    "bar": {"cornerRadiusEnd": 2},
+    "background": "#F6F6F6",
+    "legend": {"orient": "bottom", "columns": 3}
+  }
+}
