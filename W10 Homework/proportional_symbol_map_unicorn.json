@@ -1,0 +1,161 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+  "width": 800,
+  "height": 400,
+  "title": "Number of Unicorn Startup Companies in Countries",
+  "projection": {"type": "equalEarth"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/7_others/oceans.topojson",
+        "format": {"type": "topojson", "feature": "oceans"}
+      },
+      "mark": {"type": "geoshape", "fill": "lightsteelblue"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/hxuanc/FIT3179/main/W9%20Homework/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+      },
+      "mark": {"type": "geoshape", "fill": "seashell", "stroke": "lightgray"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/hxooi/FIT3179/main/W9%20Homework/ne_110m.json",
+        "format": {"type": "topojson", "feature": "ne_110m_graticules_30"}
+      },
+      "mark": {"type": "geoshape", "fill": null, "stroke": "lightgray"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/hxooi/FIT3179/main/W9%20Homework/country_origin_unicorn_startup.csv"
+      },
+      "mark": {"type": "circle", "fill": "coral"},
+      "encoding": {
+        "longitude": {"field": "lon", "type": "quantitative"},
+        "latitude": {"field": "lat", "type": "quantitative"},
+        "size": {
+          "field": "Count",
+          "type": "quantitative",
+          "title": "Number of Unicorn Startups",
+          "scale": {"domain": [1, 100, 600]}
+        },
+        "tooltip": [
+          {"field": "Country", "type": "nominal"},
+          {"field": "Count", "type": "quantitative"}
+        ]
+      }
+    }
+  ],
+  "config": {
+    "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+    "title": {
+      "text": "Distribution of Investment by Country",
+      "fontSize": 14,
+      "font": "Verdana"
+    },
+    "data": {
+      "url": "https://raw.githubusercontent.com/hxooi/FIT3179/main/DataVisualization2/data/investor_country_summary.csv",
+      "format": {"type": "csv"}
+    },
+    "width": 470,
+    "height": 400,
+    "transform": [
+      {
+        "aggregate": [{"op": "sum", "field": "Count", "as": "Count"}],
+        "groupby": ["Investor", "Country"]
+      },
+      {
+        "joinaggregate": [
+          {"op": "sum", "field": "Count", "as": "InvestorTotal"}
+        ],
+        "groupby": ["Investor"]
+      },
+      {
+        "calculate": "datum.Count / datum.InvestorTotal * 100",
+        "as": "Percentage"
+      }
+    ],
+    "mark": {"type": "bar", "cursor": "pointer"},
+    "params": [
+      {
+        "name": "country_highlight",
+        "select": {"type": "point", "fields": ["Country"]},
+        "bind": "legend"
+      },
+      {"name": "hover", "select": {"type": "point", "on": "mouseover"}}
+    ],
+    "encoding": {
+      "x": {
+        "field": "Investor",
+        "type": "nominal",
+        "title": "Investor",
+        "sort": {"op": "sum", "field": "Count", "order": "descending"},
+        "axis": {
+          "labelAngle": -35,
+          "labelAlign": "right",
+          "labelFontSize": 10,
+          "labelLimit": 100,
+          "labelExpr": "replace(replace(replace(datum.value, ' Capital', '\\nCapital'), ' Ventures', '\\nVentures'), ' Management', '\\nManagement')"
+        },
+        "scale": {"paddingInner": 0.25, "paddingOuter": 0.05}
+      },
+      "xOffset": {"field": "Country"},
+      "y": {
+        "field": "Count",
+        "type": "quantitative",
+        "title": "Number of Companies"
+      },
+      "color": {
+        "field": "Country",
+        "type": "nominal",
+        "scale": {
+          "domain": [
+            "China",
+            "United Kingdom",
+            "Canada",
+            "United States",
+            "Other"
+          ],
+          "range": ["#FFB085", "#005A8D", "#91C483", "#C689C6", "#556FB5"]
+        },
+        "legend": {"title": "Country"}
+      },
+      "opacity": {
+        "condition": {"param": "country_highlight", "value": 1},
+        "value": 0.7
+      },
+      "stroke": {
+        "condition": {"param": "hover", "empty": false, "value": "black"},
+        "value": null
+      },
+      "strokeWidth": {
+        "condition": {"param": "hover", "empty": false, "value": 2},
+        "value": 0
+      },
+      "order": {"field": "Country"},
+      "tooltip": [
+        {"field": "Investor", "type": "nominal", "title": "Investor"},
+        {"field": "Country", "type": "nominal", "title": "Country"},
+        {
+          "field": "Count",
+          "type": "quantitative",
+          "title": "Number of Companies"
+        },
+        {
+          "field": "Percentage",
+          "type": "quantitative",
+          "title": "Share within Investor (%)",
+          "format": ".1f"
+        }
+      ]
+    },
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false},
+      "bar": {"cornerRadiusTopLeft": 2, "cornerRadiusTopRight": 2},
+      "background": "#F6F6F6",
+      "legend": {"orient": "bottom"}
+    }
+  }
+}
