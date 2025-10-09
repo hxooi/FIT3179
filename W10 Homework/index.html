@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Unicorn Startups</title>
+
+  <!-- Vega stack (compatible versions) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.24.0"></script>
+
+  <!-- Pure.css -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Inline CSS for full centering -->
+  <style>
+    body {
+      font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Wrap all content in the center */
+    .content-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    /* Headings */
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 0.6em;
+    }
+
+    /* Paragraphs */
+    p {
+      text-align: center;
+      line-height: 1.6;
+      font-size: 1.05em;
+      margin: 0 auto 1.5em;
+      max-width: 800px;
+    }
+
+    /* Chart containers */
+    .vis-container {
+      display: block;
+      margin: 0 auto 2em;
+      max-width: 850px;
+    }
+
+    /* Optional: Add a slight shadow for each visualization */
+    .vis-container canvas {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      border-radius: 10px;
+    }
+
+    /* Make sure grid elements align center too */
+    .pure-g {
+      justify-content: center;
+    }
+
+  </style>
+</head>
+
+<body>
+  <main class="content-wrapper">
+
+    <!-- Header -->
+    <section>
+      <h1>Unicorn Startup Companies</h1>
+      <p>
+        A <strong>unicorn</strong> refers to a privately held startup company with a valuation exceeding US$1&nbsp;billion.
+        The term was introduced in 2013, drawing inspiration from the mythical creature to symbolize the rarity of such achievements
+        in the business world. To attain unicorn status, companies must demonstrate exceptional innovation, creativity,
+        and a clear vision for sustained future growth.
+      </p>
+    </section>
+
+    <!-- Map section -->
+    <section>
+      <h2>Unicorn Startup Companies around the World</h2>
+      <p>
+        Unicorns aren’t just found in one place — they’re all over the world! Today, there are more than 1,000 unicorn startups
+        across 46 countries, covering five regions: the Americas, Asia, Europe, Africa, and Oceania. This shows how innovation is
+        happening everywhere, not just in one corner of the globe.
+      </p>
+      <div id="vis1" class="vis-container"></div>
+    </section>
+
+    <!-- Industry section -->
+    <section>
+      <h2>Unicorn Startup by Industry</h2>
+      <p>
+        Unicorn startups come from <strong>over 15 industries</strong>, such as <strong>Edtech</strong>,
+        <strong>Artificial Intelligence</strong>, and <strong>Mobile and Telecommunications</strong>.
+        Most unicorns, however, are found in the <strong>Fintech</strong> and
+        <strong>Internet Software and Services</strong> industries, showing where innovation is strongest today.
+      </p>
+      <div id="vis3" class="vis-container"></div>
+    </section>
+
+  </main>
+
+  <script type="text/javascript">
+    // Paths to your Vega-Lite specs
+    var proportional_symbol_map = "proportional_symbol_map_unicorn.json";
+    var lineChart = "linechart.json";
+
+    vegaEmbed('#vis1', proportional_symbol_map, {actions: false}).catch(console.error);
+    vegaEmbed('#vis3', lineChart, {actions: false}).catch(console.error);
+  </script>
+</body>
+</html>
 
