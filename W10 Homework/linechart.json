@@ -4,7 +4,7 @@
   "height": 500,
   "title": "Distribution of Unicorn Startups across Industries",
   "data": {
-    "url": "https://raw.githubusercontent.com/hxooi/FIT3179/main/W10%20Homework/unicorn_heatmap.csv"
+    "url": "https://raw.githubusercontent.com/hxooi/FIT3179/main/W10%20Homework/unicorn_growth_linechart.csv"
   },
   "layer": [
     {
