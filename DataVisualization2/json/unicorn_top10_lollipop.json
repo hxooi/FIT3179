@@ -3,44 +3,56 @@
   "width": 590,
   "height": 600,
   "title": {
-    "text": "Top 10 Unicorn Startups Worldwide",
+    "text": "Top 10 Most Valuable Unicorn Companies in the World",
     "fontSize": 14,
     "font": "Verdana"
   },
-  "description": "Minimalist Lollipop chart with conditional colouring",
+  "description": "Minimalist Lollipop chart with annotation for ByteDance",
   "data": {
     "name": "dataset",
     "url": "https://raw.githubusercontent.com/hxooi/FIT3179/main/DataVisualization2/data/unicorn_top10_lollipop.csv"
   },
   "layer": [
     {
-      "transform": [
-        {"filter": "datum.Company== 'Checkout.com'"},
-        {
-          "calculate": "'Among the top 10, four companies come from the Fintech industry.'",
-          "as": "annotation"
-        }
-      ],
+      "data": {
+        "values": [
+          {
+            "Company": "ByteDance",
+            "y": 148,
+            "annotation": "ByteDance leads at ≈ US$140B. \nThis success comes from TikTok’s wide global reach\n and smart use of AI."
+          }
+        ]
+      },
       "mark": {
         "type": "text",
-        "dx": -54,
-        "dy": -180,
-        "fontWeight": "bold",
         "font": "Verdana",
-        "fontSize": 10
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 30,
+        "dy": -6,
+        "lineBreak": "\n",
+        "background": "white",
+        "cornerRadius": 3,
+        "opacity": 0.95
       },
-      "encoding": {"text": {"field": "annotation"}}
+      "encoding": {
+        "x": { "field": "Company", "type": "nominal" },
+        "y": { "field": "y", "type": "quantitative" },
+        "text": { "field": "annotation" }
+      }
     },
     {
       "description": "Lollipop Stick",
-      "mark": {"type": "bar", "width": 8},
+      "mark": { "type": "bar", "width": 8 },
       "encoding": {
-        "x": {"field": "Company", "type": "nominal"},
+        "x": { "field": "Company", "type": "nominal" },
         "y": {
           "field": "Valuation ($B)",
           "type": "quantitative",
-          "axis": {"grid": false},
-          "scale": {"domain": [0, 160]}
+          "axis": { "grid": false },
+          "scale": { "domain": [0, 160] }
         },
         "color": {
           "legend": null,
@@ -65,21 +77,9 @@
               "Travel"
             ],
             "range": [
-              "#357C3C",
-              "#85C88A",
-              "#E5CB9F",
-              "#FFCCB3",
-              "#FFAB76",
-              "#FE7E6D",
-              "#FFD372",
-              "#C689C6",
-              "#AC66CC",
-              "#A799B7",
-              "#B7657B",
-              "#93ABD3",
-              "#7692E4",
-              "#3F52E3",
-              "#2541B2"
+              "#357C3C","#85C88A","#E5CB9F","#FFCCB3","#FFAB76",
+              "#FE7E6D","#FFD372","#C689C6","#AC66CC","#A799B7",
+              "#B7657B","#93ABD3","#7692E4","#3F52E3","#2541B2"
             ]
           }
         }
@@ -87,14 +87,10 @@
     },
     {
       "description": "Lollipop",
-      "mark": {
-        "type": "point",
-        "tooltip": true,
-        "size": 500,
-        "filled": true,
-        "opacity": 1
-      },
+      "mark": { "type": "point", "tooltip": true, "size": 500, "filled": true, "opacity": 1 },
       "encoding": {
+        "x": { "field": "Company", "type": "nominal" },
+        "y": { "field": "Valuation ($B)", "type": "quantitative" },
         "color": {
           "legend": null,
           "field": "Industry",
@@ -118,28 +114,14 @@
               "Travel"
             ],
             "range": [
-              "#357C3C",
-              "#85C88A",
-              "#E5CB9F",
-              "#FFCCB3",
-              "#FFAB76",
-              "#FE7E6D",
-              "#FFD372",
-              "#C689C6",
-              "#AC66CC",
-              "#A799B7",
-              "#B7657B",
-              "#93ABD3",
-              "#7692E4",
-              "#3F52E3",
-              "#2541B2"
+              "#357C3C","#85C88A","#E5CB9F","#FFCCB3","#FFAB76",
+              "#FE7E6D","#FFD372","#C689C6","#AC66CC","#A799B7",
+              "#B7657B","#93ABD3","#7692E4","#3F52E3","#2541B2"
             ]
           }
-        },
-        "x": {"field": "Company", "type": "nominal"},
-        "y": {"field": "Valuation ($B)", "type": "quantitative"}
+        }
       }
     }
   ],
-  "config": {"view": {"stroke": null}, "background": "#F6F6F6"}
+  "config": { "view": { "stroke": null }, "background": "#F6F6F6" }
 }
