@@ -11,7 +11,7 @@
 }
 .headerText{
     position: absolute;
-    color: black;
+    color: white;
 
     text-align: center;
     top: 50%;
@@ -110,7 +110,7 @@ hr {
     font-weight: bolder;
 }
 #unicorn {
-    color: #6F38C5;
+    color: #150050;
     font-weight: bold;
     font-family: 'Verdana';
     font-size: 48px;
