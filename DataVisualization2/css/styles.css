@@ -11,7 +11,7 @@
 }
 .headerText{
     position: absolute;
-    color: white;
+    color: darkslategrey;
 
     text-align: center;
     top: 50%;
@@ -49,12 +49,12 @@ hr {
 
 /* colour */
 #hUnicorn{
-    color: #F0D9FF;
+    color: #C54B8C;
     font-size: 22px;
     font-weight: bolder;
 }
 #unicornp {
-    color: #FCCB06;
+    color: #C54B8C;
     font-size: 22px;
     font-weight: bolder;
 }
@@ -110,14 +110,14 @@ hr {
     font-weight: bolder;
 }
 #unicorn {
-    color: #FCCB06;
+    color: #C54B8C;
     font-weight: bold;
     font-family: 'Verdana';
     font-size: 48px;
     text-align: center;
 }
 #unicornh3 {
-    color: #FCCB06;
+    color: #C54B8C;
     font-weight: bold;
     font-family: 'Verdana';
     font-size: 28px;
