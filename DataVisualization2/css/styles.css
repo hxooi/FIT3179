@@ -24,7 +24,7 @@
     text-align: center;
 }
 
-/* line */
+/* 
 hr {
     display: block;
     height: 1px;
@@ -37,7 +37,15 @@ hr {
     margin-left: 40px;
     margin-right: 40px
 
+}*/ 
+hr {
+    display: block;
+    border: none;
+    border-top: 2px solid lightgrey;
+    width: 100%;
+    margin: 40px 0;
 }
+
 
 #U {
     color: #F7DBF0;
