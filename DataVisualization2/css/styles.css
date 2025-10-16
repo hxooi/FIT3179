@@ -80,3 +80,33 @@ p  { font-size:22px; text-align:justify; padding:0 100px; }
 
 /* Optional: lighten default paragraph weight a touch for better contrast */
 p { font-weight: 400; }
+
+/* ========== Footer Overrides (so it truly centers) ========== */
+/* Add class="footer" to your footer's outer .pure-g */
+.footer .headerContainer { position: relative; }
+.footer .footerText{
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;      /* center lines horizontally */
+  justify-content: center;  /* center within the image vertically */
+  gap: 6px;
+  text-align: center;
+  padding: 0 20px;          /* small safety padding */
+}
+
+/* Remove global p padding/justify inside footer */
+.footer p{
+  padding: 0;
+  margin: 4px 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.footer .role { font-style: italic; }
+.footer .name { font-weight: 700; }
+.footer .links a { color: #2541B2; text-decoration: none; }
+.footer .links a:hover { text-decoration: underline; }
