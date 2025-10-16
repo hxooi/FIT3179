@@ -1,287 +1,82 @@
-/* header */
-#headerImage {
-    width: 1500px;
-    height: 400px;
-    
-}
+/* ========== Header ========== */
+#headerImage { width: 1500px; height: 400px; }
 
-.headerContainer {
-    position: relative;
-    text-align: center
-}
+.headerContainer { position: relative; text-align: center; }
 .headerText{
-    position: absolute;
-    color: darkslategrey;
-
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  position: absolute; color: darkslategrey; text-align: center;
+  top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;
 }
+#center { text-align: center; }
 
-#center {
-    text-align: center;
-}
-
-/* 
+/* ========== Divider ========== */
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 2px solid lightgrey;
-    margin: 1em 0;
-    padding: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-left: 40px;
-    margin-right: 40px
-
-}*/ 
-hr {
-    display: block;
-    border: none;
-    border-top: 2px solid lightgrey;
-    width: 100%;
-    margin: 40px 0;
+  display: block; border: none; border-top: 2px solid lightgrey;
+  width: 100%; margin: 40px 0;
 }
 
+/* ========== Global Font ========== */
+/* Everything uses Arial by default */
+body * { font-family: Arial, Helvetica, sans-serif; }
 
-#U {
-    color: #F7DBF0;
-    font-weight: bolder;
-    font-family: 'Verdana';
-    font-size: 80px;
-    font-weight: 700;
+/* Standout accents use extra-bold Arial Black (falls back to Arial) */
+#unicorn, #unicornh3, #hUnicorn, #unicornp, #red, #darkblue {
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: none; /* set to uppercase if you want even more punch */
 }
 
-/* colour */
-#hUnicorn{
-    color: #C54B8C;
-    font-size: 22px;
-    font-weight: bolder;
+/* ========== Accent Colors (keep your palette) ========== */
+#hUnicorn, #unicornp, #us, #china, #india, #fintech, #ai, #internet, #ecommerce, #cyber {
+  font-size: 22px; font-weight: bolder;
 }
-#unicornp {
-    color: #C54B8C;
-    font-size: 22px;
-    font-weight: bolder;
+#hUnicorn, #unicornp { color: #C54B8C; }
+#us { color:#005A8D; }
+#china { color:#ef9869; }
+#india { color:#FF96AD; }
+#fintech { color:#C689C6; }
+#ai { color:#2541B2; }
+#internet { color:#FFAB76; }
+#ecommerce { color:#877798; }
+#cyber { color:#768eb7; }
+
+#unicorn   { color:#C54B8C; font-size:48px; text-align:center; }
+#unicornh3 { color:#C54B8C; font-size:28px; text-align:center; }
+#red       { color:#4169E1; font-size:42px; text-align:center; }
+#darkblue  { color:#150050; font-size:28px; text-align:center; }
+
+/* ========== Page ========== */
+.page { width:1500px; background-color:#F6F6F6; margin:auto; }
+
+/* ========== Chart Containers ========== */
+.vis-container { width:100%; align-items:center; align-content:center; }
+
+.donut-container   { width:100%; padding:50px 200px 20px 290px; }
+.map-container     { width:100%; padding:0 50px 20px 120px; }
+.alluvial-container{ width:100%; padding:20px 50px; }
+.treemap-container { width:100%; padding:20px 15px 20px 80px; }
+.lollipop-container{ width:100%; padding:20px 50px 0 15px; }
+.bar1-container    { width:100%; padding:15px 20px 0 80px; }
+.bar2-container    { width:100%; padding:15px 70px 0 0; }
+
+/* ========== Headings & Paragraphs ========== */
+/* Headings use Arial Black for a bold, “special” feel */
+h1, h2, h3 {
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  color:#150050; text-align:center;
 }
+h1 { font-weight:900; font-size:80px; color:black; }
+h2 { font-weight:900; font-size:42px; }
+h3 { font-weight:900; font-size:28px; }
 
-#us {
-    color:#005A8D;
-    font-size: 22px;
-    font-weight: bolder;
-}
+p  { font-size:22px; text-align:justify; padding:0 100px; }
+#footer { font-size:18px; text-align:center; }
 
-#china{
-    color:#ef9869;
-    font-size: 22px;
-    font-weight: bolder;
-}
+/* ========== Layout helpers ========== */
+.description-right { padding-left:20px; }
+.description-left  { padding-right:20px; }
+.pure-g { margin-bottom:40px; }
+.small-font { font-size:14px; }
 
-#india{
-    color:#FF96AD;
-    font-size: 22px;
-    font-weight: bolder;
-}
-
-#fintech {
-    color:#C689C6;
-    font-size: 22px;
-    font-weight: bolder;
-}
-
-#ai {
-    color:#2541B2;
-    font-size: 22px;
-    font-weight: bolder;
-}
-
-#internet
-{
-    color:#FFAB76;
-    font-size: 22px;
-    font-weight: bolder;
-}
-
-#ecommerce
-{
-    color:#877798;
-    font-size: 22px;
-    font-weight: bolder;
-}
-
-#cyber
-{
-    color:#768eb7;
-    font-size: 22px;
-    font-weight: bolder;
-}
-#unicorn {
-    color: #C54B8C;
-    font-weight: bold;
-    font-family: 'Verdana';
-    font-size: 48px;
-    text-align: center;
-}
-#unicornh3 {
-    color: #C54B8C;
-    font-weight: bold;
-    font-family: 'Verdana';
-    font-size: 28px;
-    text-align: center;
-}
-#red {
-    color: #4169E1;
-    font-weight: bold;
-    font-family: 'Verdana';
-    font-size: 42px;
-    text-align: center;
-}
-
-#darkblue {
-    color: #150050;
-    font-weight: bold;
-    font-family: 'Verdana';
-    font-size: 28px;
-    text-align: center;
-}
-
-.page {
-    width:1500px;
-    background-color: #F6F6F6;
-    margin: auto;
-}
-
-/* charts */
-
-.vis-container {
-    width: 100%;
-    align-items: center;
-    align-content: center;
-
-}
-
-.donut-container {
-    width: 100%;
-    padding-left: 290px;
-    padding-right: 200px;
-    padding-top: 50px;
-    padding-bottom: 20px;
-}
-
-.map-container {
-    width: 100%;
-    padding-left: 120px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-}
-
-.alluvial-container {
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.treemap-container {
-    width: 100%;
-    padding-left: 80px;
-    padding-right: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.lollipop-container {
-    width: 100%;
-    padding-left: 15px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 0px;
-
-}
-.bar1-container {
-    width: 100%;
-    padding-left: 80px;
-    padding-right: 20px;
-    padding-top: 15px;
-    padding-bottom: 0px;
-}
-
-.bar2-container {
-    width: 100%;
-    padding-right: 70px;
-    padding-top: 15px;
-    padding-bottom: 0px;
-}
-
-
-/* font in paragraph */
-body *{
-    font-family: 'Open Sans', sans-serif;
-}
-
-
-h1 {
-    font-weight: 1000;
-    font-family: 'Verdana';
-    font-size: 80px;
-    font-weight: 700;
-    color: "white";
-}
-
-.description 
-h1 {
-    margin-top: 0px;
-  
-    align-items: center;
-    text-align: center;
-
-}
-
-h2 {
-    align-items: justify;
-    text-align: center;
-    font-family: 'Verdana';
-    font-size: 42px;
-    color: #150050;
-}
-
-h3 {
-    align-items: justify;
-    text-align: center;
-    font-family: 'Verdana';
-    font-size: 28px;
-    color: #150050;
-}
-
-p{
-    font-size: 22px;
-    text-align: justify;
-    padding-left: 100px;
-    padding-right: 100px;
-
-}
-
-#footer{
-    font-size: 18px;
-    text-align: center;
-
-}
-
-.description-right {
-    padding-left: 20px;
-}
-
-.description-left {
-    padding-right: 20px;
-}
-
-.pure-g {
-    margin-bottom: 40px;
-}
-
-.small-font {
-    font-size: 14px;
-}
+/* Optional: lighten default paragraph weight a touch for better contrast */
+p { font-weight: 400; }
