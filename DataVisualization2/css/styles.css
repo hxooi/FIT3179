@@ -2,7 +2,6 @@
 #headerImage {
     width: 1500px;
     height: 400px;
-    
 }
 
 .headerContainer {
@@ -12,7 +11,6 @@
 .headerText{
     position: absolute;
     color: darkslategrey;
-
     text-align: center;
     top: 50%;
     left: 50%;
@@ -36,7 +34,6 @@ hr {
     padding-right: 40px;
     margin-left: 40px;
     margin-right: 40px
-
 }
 
 #U {
@@ -89,22 +86,19 @@ hr {
     font-weight: bolder;
 }
 
-#internet
-{
+#internet {
     color:#FFAB76;
     font-size: 22px;
     font-weight: bolder;
 }
 
-#ecommerce
-{
+#ecommerce {
     color:#877798;
     font-size: 22px;
     font-weight: bolder;
 }
 
-#cyber
-{
+#cyber {
     color:#768eb7;
     font-size: 22px;
     font-weight: bolder;
@@ -146,12 +140,10 @@ hr {
 }
 
 /* charts */
-
 .vis-container {
     width: 100%;
     align-items: center;
     align-content: center;
-
 }
 
 .donut-container {
@@ -191,8 +183,8 @@ hr {
     padding-right: 50px;
     padding-top: 20px;
     padding-bottom: 0px;
-
 }
+
 .bar1-container {
     width: 100%;
     padding-left: 80px;
@@ -208,12 +200,10 @@ hr {
     padding-bottom: 0px;
 }
 
-
 /* font in paragraph */
 body *{
     font-family: 'Open Sans', sans-serif;
 }
-
 
 h1 {
     font-weight: 1000;
@@ -223,13 +213,10 @@ h1 {
     color: "white";
 }
 
-.description 
-h1 {
+.description h1 {
     margin-top: 0px;
-  
     align-items: center;
     text-align: center;
-
 }
 
 h2 {
@@ -253,13 +240,11 @@ p{
     text-align: justify;
     padding-left: 100px;
     padding-right: 100px;
-
 }
 
 #footer{
     font-size: 14px;
     text-align: center;
-
 }
 
 .description-right {
@@ -276,4 +261,45 @@ p{
 
 .small-font {
     font-size: 14px;
+}
+
+/* --------------------------- */
+/* NEW: left-chart / right-text */
+/* --------------------------- */
+
+/* Make the left column chart snug (your bar containers already have padding).
+   This modifier ensures it sits nicely when used as a left column. */
+.flush-left {
+  padding-left: 15px;   /* match other chart paddings for consistency */
+  padding-right: 20px;  /* small right gutter so it doesn't hug the aside */
+}
+
+/* Right-hand aside: remove global p side-padding and style as a soft card */
+.chart-aside {
+  padding: 1rem 1.25rem;
+  background: #f8f9fb;
+  border: 1px solid #e6e8ef;
+  border-radius: 14px;
+  line-height: 1.55;
+}
+.chart-aside p {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0 0 0.75rem 0;
+}
+.chart-aside .aside-note {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  margin-top: 0.25rem;
+}
+
+/* Optional: column breathing room from md+ */
+@media (min-width: 48em) {
+  .chart-aside { margin-left: 10px; }
+}
+
+/* Optional helper if you want spacing between stacked rows */
+.chart-row {
+  align-items: stretch;
+  gap: 0;
 }

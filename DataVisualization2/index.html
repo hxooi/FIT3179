@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+  <meta charset="utf-8" />
   <title>Unicorn Startups</title>
-  <!-- Import Vega & Vega-Lite & Vega-Embed (latest stable) -->
+
+  <!-- Vega, Vega-Lite & Vega-Embed (latest stable) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@6.0.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@7.0.2"></script>
-</head>
 
-  <!-- Import pure.css -->
+  <!-- Pure.css -->
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
-    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google font -->
@@ -19,195 +19,175 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-  <!-- CSS file -->
+  <!-- Your CSS -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
-
-
 </head>
 
-
 <body>
-
   <div class="page">
 
-    <!-- pure grid group -->
+    <!-- Header -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-      <div class="headerContainer">
-        <img src="image/unicorn_header.png", id="headerImage">
-        <div class="headerText"> 
-          <h1 id="center">UNICORN STARTUPS</h1>
-          <p>According to Wikipedia, privately held startup companies that are valued at over US$1 billion 
-            are known as <span id="hUnicorn">unicorns</span>. The term <span id="hUnicorn">unicorn</span> was first coined in year 2013, 
-            and uses the name of a mythical animal to represent the rareness of such success. 
-            How does a company achieves this milestone - people may wonder. In this visualization, 
-            let us explore the world of <span id="hUnicorn">unicorns</span> and analyze their success from different perspectives! </p>
+        <div class="headerContainer">
+          <img src="image/unicorn_header.png" id="headerImage" alt="Unicorn Header">
+          <div class="headerText">
+            <h1 id="center">UNICORN STARTUPS</h1>
+            <p>
+              According to Wikipedia, privately held startup companies that are valued at over US$1 billion
+              are known as <span id="hUnicorn">unicorns</span>. The term <span id="hUnicorn">unicorn</span> was first coined in year 2013,
+              and uses the name of a mythical animal to represent the rareness of such success.
+              How does a company achieves this milestone - people may wonder. In this visualization,
+              let us explore the world of <span id="hUnicorn">unicorns</span> and analyze their success from different perspectives!
+            </p>
+          </div>
         </div>
       </div>
-
-
-      </div>
     </div>
-    <!-- end pure grid group -->
 
-    
-    <!-- pure grid group - Map -->
+    <!-- Map lead-in -->
     <div class="pure-g">
       <div class="pure-u-1-1">
         <h2><span id="unicorn">Unicorn</span> Startups around the World</h2>
-        <p>Where are the <span id="unicornp">unicorns</span> from? Over the years, there has been a 
-                                        substantial growth in the number of unicorn startup companies. 
-                                        From the map below, we can observe that the <span id="us">United States</span> leads the race. 
-                                        <span id="china">China</span> and <span id="india">India</span> are the <span id="china">second</span> and 
-                                        <span id="india">third</span> countries with highest number of <span id="unicornp">unicorns</span>. 
-                                        Research shows that a lot of <span id="unicornp">unicorns</span> are from countries rich with <strong>growth-stage funding</strong> (Embroker Team, 2022).</p>
+        <p>
+          Where are the <span id="unicornp">unicorns</span> from? Over the years, there has been a
+          substantial growth in the number of unicorn startup companies.
+          From the map below, we can observe that the <span id="us">United States</span> leads the race.
+          <span id="china">China</span> and <span id="india">India</span> are the <span id="china">second</span> and
+          <span id="india">third</span> countries with highest number of <span id="unicornp">unicorns</span>.
+          Research shows that a lot of <span id="unicornp">unicorns</span> are from countries rich with <strong>growth-stage funding</strong> (Embroker Team, 2022).
+        </p>
       </div>
     </div>
-    <div class="pure-u-1-1">
-      <div id="map" class="map-container"></div>
-    </div>
-    <!-- end pure grid group -->
-
-    <hr> 
-    
-    <!-- pure grid group -->
     <div class="pure-g">
-        <div class = "pure-u-1-1">
-          <h3> From 2011 to 2022, there are</h3>
-          <h3> <span id="red">1165</span> <span id="unicornh3">UNICORNS</span> from  <span id="red">15</span> <span id="darkblue">INDUSTRIES</span> </h3>
-          <h3> across <span id="red">6</span> <span id="darkblue">REGIONS</span> and <span id="red">49</span> <span id="darkblue">COUNTRIES</span> </h3>
-          <div id="donutIndustry" class="donut-container"></div>
-
-        </div>
-
-          
-        
-    </div>
-    <!-- end pure grid group -->
-
-    <hr/>
-    <!-- pure grid group -->
-    <div class="pure-g">
-        <div class="pure-u-1-1">
-          <h2>Top 10 Countries with Most <span id="unicorn">Unicorns</span></h2>
-          <p >Let's dive further into the Top 10 Countries with most <span id="unicornp">unicorns</span>!
-            From the diagram below, we can observe that a majority of the <span id="unicornp">unicorns</span>  from these 10 countries are from the 
-            <span id="fintech">Fintech</span>, <span id="internet">Internet software and services</span>, and <span id="ecommerce">E-commerce and direct-to-consumer</span> industries.
-            </p>
-            <div id="alluvial2" class="alluvial-container"></div>
-        </div>
+      <div class="pure-u-1-1">
+        <div id="map" class="map-container"></div>
       </div>
+    </div>
 
-        
-    <!-- end pure grid group -->
+    <hr>
+
+    <!-- Donut -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h3> From 2011 to 2022, there are</h3>
+        <h3> <span id="red">1165</span> <span id="unicornh3">UNICORNS</span> from  <span id="red">15</span> <span id="darkblue">INDUSTRIES</span> </h3>
+        <h3> across <span id="red">6</span> <span id="darkblue">REGIONS</span> and <span id="red">49</span> <span id="darkblue">COUNTRIES</span> </h3>
+        <div id="donutIndustry" class="donut-container"></div>
+      </div>
+    </div>
+
     <hr/>
-    <!-- pure grid group -->
+
+    <!-- Alluvial (Top 10 countries) -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h2>Top 10 Countries with Most <span id="unicorn">Unicorns</span></h2>
+        <p>
+          Let's dive further into the Top 10 Countries with most <span id="unicornp">unicorns</span>!
+          From the diagram below, we can observe that a majority of the <span id="unicornp">unicorns</span> from these 10 countries are from the
+          <span id="fintech">Fintech</span>, <span id="internet">Internet software and services</span>, and <span id="ecommerce">E-commerce and direct-to-consumer</span> industries.
+        </p>
+        <div id="alluvial2" class="alluvial-container"></div>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- Treemap + Lollipop -->
     <div class="pure-g">
       <div class="pure-u-1-1">
         <h2>Industries and their Total Valuation</h2>
-        <p >Now, you may wonder which are the most successful - or most valuable <span id="unicornp">unicorns</span>. 
-            From the treemap, we can observe that <span id="fintech">Fintech</span> leads the race with the highest total valuation among all industries!  
-            We can also observe that among the top 10 most valued <span id="unicornp">unicorns</span>, 4 of them are from the <span id="fintech">Fintech</span> industry. 
-            However, the leading <span id="unicornp">unicorn</span> <span id="ai">ByteDance</span>, 
-            is an <span id="ai">Artificial Intelligence</span> company with a valuation of <span id="ai">$140 billion</span>.
+        <p>
+          Now, you may wonder which are the most successful - or most valuable <span id="unicornp">unicorns</span>.
+          From the treemap, we can observe that <span id="fintech">Fintech</span> leads the race with the highest total valuation among all industries!
+          We can also observe that among the top 10 most valued <span id="unicornp">unicorns</span>, 4 of them are from the <span id="fintech">Fintech</span> industry.
+          However, the leading <span id="unicornp">unicorn</span> <span id="ai">ByteDance</span>,
+          is an <span id="ai">Artificial Intelligence</span> company with a valuation of <span id="ai">$140 billion</span>.
         </p>
       </div>
-      <div class="pure-u-1-2">
- 
-          <div id="treemap" class="treemap-container"></div>
+      <div class="pure-u-1 pure-u-md-1-2">
+        <div id="treemap" class="treemap-container"></div>
       </div>
-      <div class="pure-u-1-2">
-          <div id="lollipop" class="lollipop-container"></div>
+      <div class="pure-u-1 pure-u-md-1-2">
+        <div id="lollipop" class="lollipop-container"></div>
       </div>
     </div>
 
-      
-    <!-- end pure grid group -->
     <hr/>
-    <!-- pure grid group -->
+
+    <!-- Investors section (stacked bars with text on the right) -->
     <div class="pure-g">
-      <div class="pure-u-1-1">
+      <div class="pure-u-1">
         <h2>Investors of <span id="unicorn">Unicorns</span> and their Investment Breakdown</h2>
-        <p >Investors give support in paving the road to success for <span id="unicornp">unicorns</span>. 
-            Looking at the investment breakdown of the Top 10 Investors, 
-            we can see that majority of them invest in <span id="unicornp">unicorns</span> from United States, China and India 
-            - which verifies that growth-stage funding are very important. 
-            We can also observe that the investors have a preference to invest <span id="ai">Artificial Intelligence</span>, 
-            <span id="fintech">Fintech</span>, <span id="ecommerce">E-commerce and direct-to-consumer</span> and <span id="cyber">Cybersecurity</span> industries.
-        </p>
-      </div>
-      <div class="pure-u-1-2">
- 
-          <div id="barCountry" class="bar1-container"></div>
-      </div>
-      <div class="pure-u-1-2">
-          <div id="barIndustry" class="bar2-container"></div>
       </div>
     </div>
-    
-    <!--footer-->
+
+    <!-- Row 1: Industry stacked bar (LEFT) + text (RIGHT) -->
+    <div class="pure-g chart-row">
+      <div class="pure-u-1 pure-u-md-2-3">
+        <div id="barIndustry" class="bar2-container flush-left"></div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-3">
+        <aside class="chart-aside">
+          <p>
+            Investors help pave the road to success for <span id="unicornp">unicorns</span>.
+            Across industries, investors favour <span id="ai">AI</span>, <span id="fintech">Fintech</span>,
+            <span id="ecommerce">E-commerce &amp; DTC</span>, and <span id="cyber">Cybersecurity</span>.
+          </p>
+          <p class="aside-note">Tip: hover the legend to isolate an industry and see where capital concentrates.</p>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Row 2 (optional): Country stacked bar (LEFT) + text (RIGHT) -->
+    <div class="pure-g chart-row">
+      <div class="pure-u-1 pure-u-md-2-3">
+        <div id="barCountry" class="bar1-container flush-left"></div>
+      </div>
+      <div class="pure-u-1 pure-u-md-1-3">
+        <aside class="chart-aside">
+          <p>
+            Most investments cluster in the <span id="us">United States</span>, <span id="china">China</span>,
+            and <span id="india">India</span>, reflecting the importance of strong <strong>growth-stage funding</strong> ecosystems.
+          </p>
+          <p class="aside-note">Try clicking legend items to focus on a region and compare investor patterns.</p>
+        </aside>
+      </div>
+    </div>
+
+    <!-- Footer -->
     <div class="pure-g">
       <div class="pure-u-1-1">
-      <div class="headerContainer">
-        <img src="image/wallpaper2.jpg", id="headerImage">
-        <div class="headerText"> 
-          <p id="footer"> Ooi Hui Xia</p>
-          <p id="footer"> FIT3179 Assignment 2</p>
-          
+        <div class="headerContainer">
+          <img src="image/wallpaper2.jpg" id="headerImage" alt="Footer Banner">
+          <div class="headerText">
+            <p id="footer">Ooi Hui Xia</p>
+            <p id="footer">FIT3179 Assignment 2</p>
+          </div>
         </div>
       </div>
-
-
-      </div>
     </div>
 
+  </div> <!-- end .page -->
 
-
-
-
-
-
-  </div> <!-- end page -->
-
+  <!-- Scripts -->
   <script type="text/javascript">
     var proportional_symbol_map = "json/unicorn_global_proportional_symbol_map.json";
     var donutIndustry = "json/unicorn_industry_donut.json";
     var alluvial2 = "json/unicorn_investor_alluvial.json";
     var treemap = "json/unicorn_industry_treemap.json";
     var lollipop = "json/unicorn_top10_lollipop.json";
-    var barCountry = "json/unicorn_investment_country_stackedbar.json"
-    var barIndustry = "json/unicorn_investment_industry_stackedbar.json"
+    var barCountry = "json/unicorn_investment_country_stackedbar.json";
+    var barIndustry = "json/unicorn_investment_industry_stackedbar.json";
 
-    vegaEmbed('#map', proportional_symbol_map, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    vegaEmbed('#donutIndustry', donutIndustry, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    vegaEmbed('#alluvial2', alluvial2, { "actions": false }).then(function (result) {
-        // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
-
-    vegaEmbed('#treemap', treemap, { "actions": false }).then(function (result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    vegaEmbed('#lollipop', lollipop, { "actions": false }).then(function (result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
-
-    vegaEmbed('#barCountry', barCountry, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);
-
-    vegaEmbed('#barIndustry', barIndustry, { "actions": false }).then(function (result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-      }).catch(console.error);      
-
-
+    vegaEmbed('#map', proportional_symbol_map, { "actions": false }).catch(console.error);
+    vegaEmbed('#donutIndustry', donutIndustry, { "actions": false }).catch(console.error);
+    vegaEmbed('#alluvial2', alluvial2, { "actions": false }).catch(console.error);
+    vegaEmbed('#treemap', treemap, { "actions": false }).catch(console.error);
+    vegaEmbed('#lollipop', lollipop, { "actions": false }).catch(console.error);
+    vegaEmbed('#barCountry', barCountry, { "actions": false }).catch(console.error);
+    vegaEmbed('#barIndustry', barIndustry, { "actions": false }).catch(console.error);
   </script>
 </body>
-
 </html>
