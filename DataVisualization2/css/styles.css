@@ -1,12 +1,47 @@
 /* ========== Header ========== */
-#headerImage { width: 1500px; height: 400px; }
-
-.headerContainer { position: relative; text-align: center; }
-.headerText{
-  position: absolute; color: darkslategrey; text-align: center;
-  top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%;
+.headerContainer {
+  position: relative;
+  text-align: center;
 }
-#center { text-align: center; }
+
+#headerImage {
+  width: 1500px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Center text block on image */
+.headerText {
+  position: absolute;
+  top: 50%; /* center vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* truly center it */
+  text-align: center;
+  color: darkslategrey;
+  width: 100%;
+  z-index: 2;
+}
+
+/* Make sure title and subtitle are grouped closely */
+.headerText h1 {
+  font-family: "Times New Roman", Georgia, serif;
+  font-size: 70px;
+  color: black;
+  margin: 0;
+  line-height: 1.1; /* reduce vertical gap */
+}
+
+/* Subtitle directly below title */
+.headerText p {
+  font-size: 24px;
+  font-style: italic;
+  margin-top: 10px;  /* small gap below title */
+  color: #2f4f4f;
+  text-align: center;
+  line-height: 1.2;
+}
+
 
 /* ========== Divider ========== */
 hr {
