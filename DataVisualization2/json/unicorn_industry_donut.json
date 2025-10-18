@@ -46,7 +46,7 @@
   "layer": [
     { "mark": {"type": "arc", "outerRadius": 300, "innerRadius": 200} },
 
-    // ★ Bigger, bolder outer labels
+
     {
       "mark": {"type": "text", "radius": 350, "fontWeight": "bold", "fontSize": 12, "font": "Verdana"},
       "encoding": {
@@ -59,13 +59,13 @@
       }
     },
 
-    // ★ Slightly larger center country label
+
     {
       "mark": {"type": "text", "fontSize": 26, "fontWeight": "bold", "color": "black", "font": "Verdana"},
       "encoding": { "text": {"field": "Country", "type": "nominal"} }
     },
 
-    // ★ Fintech insight annotation — shows only when Fintech is the top slice
+
     {
       "transform": [
         {"filter": "datum.Industry == 'Fintech' && datum.is_top"}
