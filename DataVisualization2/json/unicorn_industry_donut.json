@@ -35,7 +35,6 @@
       "type": "nominal",
       "scale": {
         "domain": [
-  "domain": [
   "Artificial Intelligence",
   "Cybersecurity",
   "E-commerce and direct-to-consumer",
@@ -47,7 +46,7 @@
   "Supply chain, logistics, and delivery",
   "Other"
 ],
-        "range": ["#357C3C","#85C88A","#E5CB9F","#FFCCB3","#FFAB76","#FE7E6D","#FFD372","#C689C6","#AC66CC","#A799B7","#B7657B","#93ABD3","#7692E4","#3F52E3","#2541B2"]
+        "range": ["#357C3C","#FFAB76","#FE7E6D","#FFD372","#C689C6","#AC66CC","#B7657B","#7692E4","#7692E4", "#2541B2"]
       }
     },
     "tooltip": {"field": "tooltip_sentence", "type": "nominal", "title": ""}
