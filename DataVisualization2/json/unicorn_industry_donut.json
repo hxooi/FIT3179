@@ -21,13 +21,11 @@
     {"calculate": "(datum.Count / datum.Total) * 100", "as": "pct"},
     {"calculate": "round(datum.pct * 10) / 10", "as": "pct1"},
     {"calculate": "(datum.Count == 1 ? '1 company' : datum.Count + ' companies')", "as": "count_text"},
-    {"calculate": "'In ' + datum.Country + ', ' + datum.Industry + ' industry has ' + datum.count_text + ' unicorns (' + datum.pct1 + '% of total).'", "as": "tooltip_sentence"},
+    {
+      "calculate": "'In ' + datum.Country + ',' + ' ' + datum.Industry + ' industry has ' + datum.count_text + ' unicorns (' + datum.pct1 + '% of total).'",
+      "as": "tooltip_sentence"
+}
 
-    {"window": [{"op": "max", "field": "Count", "as": "maxCount"}]},
-    {"calculate": "datum.Count == datum.maxCount", "as": "is_top"},
-
-
-    {"calculate": "'Fintech leads here — ' + datum.pct1 + '% share. Payments, neobanking and fintech infrastructure see the strongest funding and scale.'", "as": "fintech_note"}
   ],
 
   "encoding": {
@@ -44,65 +42,20 @@
   },
 
   "layer": [
-    { "mark": {"type": "arc", "outerRadius": 300, "innerRadius": 200} },
-
-
+    {"mark": {"type": "arc", "outerRadius": 300, "innerRadius": 200}},
     {
-      "mark": {"type": "text", "radius": 350, "fontWeight": "bold", "fontSize": 12, "font": "Verdana"},
+      "mark": {"type": "text", "radius": 350, "fontStyle": "bold", "font": "Verdana"},
       "encoding": {
         "text": {"field": "Industry", "type": "nominal"},
-        "fillOpacity": {
-          "condition": {"test": "datum['Count'] == 93 || datum['Count'] == 224 || datum['Count'] == 242 || datum['Count'] == 106", "value": 1},
-          "value": 0
-        },
+        "fillOpacity": {"condition": {"test": "datum['Count'] == 93 || datum['Count'] == 224 || datum['Count'] == 242 || datum['Count'] == 106", "value": 1}, "value": 0},
         "color": {"value": "black"}
       }
     },
-
-
     {
-      "mark": {"type": "text", "fontSize": 26, "fontWeight": "bold", "color": "black", "font": "Verdana"},
-      "encoding": { "text": {"field": "Country", "type": "nominal"} }
-    },
-
-
-    {
-      "transform": [
-        {"filter": "datum.Industry == 'Fintech' && datum.is_top"}
-      ],
-      "layer": [
-        {
-          "mark": {
-            "type": "text",
-            "align": "left",
-            "baseline": "top",
-            "dx": 10,
-            "dy": 0,
-            "x": 340,          
-            "y": 120,
-            "font": "Verdana",
-            "fontSize": 13,
-            "fontWeight": "bold"
-          },
-          "encoding": {
-            "text": {"field": "fintech_note", "type": "nominal"},
-            "color": {"value": "black"}
-          }
-        },
-        {
-          "mark": {
-            "type": "rule",
-            "x": 300, "x2": 340, "y": 160, "y2": 140,
-            "strokeDash": [4,3]
-          }
-        }
-      ]
+      "mark": {"type": "text", "fontSize": 22, "fontStyle": "bold", "color": "black", "font": "Verdana"},
+      "encoding": {"text": {"field": "Country", "type": "nominal"}, "color": {"value": "black"}}
     }
   ],
 
-  "config": {
-    "view": {"stroke": null},
-    "background": "#F6F6F6",
-    "legend": {"labelFontSize": 11, "labelLimit": 180, "symbolSize": 200}
-  }
+  "config": {"view": {"stroke": null}, "background": "#F6F6F6", "legend": {"labelFontSize": 10, "labelLimit": 180}}
 }
