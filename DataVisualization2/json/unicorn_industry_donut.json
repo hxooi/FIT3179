@@ -57,5 +57,5 @@
     }
   ],
 
-  "config": {"view": {"stroke": null}, "background": "#F6F6F6", "legend": {"labelFontSize": 10, "labelLimit": 180}}
+  "config": {"view": {"stroke": null}, "background": "#F6F6F6", "legend": {"labelFontSize": 50, "labelLimit": 180}}
 }
