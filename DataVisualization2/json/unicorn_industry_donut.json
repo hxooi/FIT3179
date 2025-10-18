@@ -34,7 +34,19 @@
       "field": "Industry",
       "type": "nominal",
       "scale": {
-        "domain": ["Artificial Intelligence","Auto and transportation","Consumer and retail","Cybersecurity","Data management and analytics","E-commerce and direct-to-consumer","Edtech","Fintech","Hardware","Health","Internet software and services","Mobile and telecommunications","Other","Supply chain, logistics, and delivery","Travel"],
+        "domain": [
+  "domain": [
+  "Artificial Intelligence",
+  "Cybersecurity",
+  "E-commerce and direct-to-consumer",
+  "Edtech",
+  "Fintech",
+  "Hardware",
+  "Health",
+  "Internet software and services",
+  "Supply chain, logistics, and delivery",
+  "Other"
+],
         "range": ["#357C3C","#85C88A","#E5CB9F","#FFCCB3","#FFAB76","#FE7E6D","#FFD372","#C689C6","#AC66CC","#A799B7","#B7657B","#93ABD3","#7692E4","#3F52E3","#2541B2"]
       }
     },
