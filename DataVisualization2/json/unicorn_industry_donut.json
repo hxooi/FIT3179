@@ -96,7 +96,7 @@
         "symbolType": "circle",
         "symbolSize": 120,
         "padding": 8,
-        "labelLimit": 1000
+        "labelLimit": 30
       }
     },
     "tooltip": {"field": "tooltip_sentence", "type": "nominal", "title": ""}
